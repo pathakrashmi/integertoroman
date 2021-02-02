@@ -1,33 +1,33 @@
 package com.example.integertoroman;
 
-import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RomanNumberController {
+public class RomanNumberController implements ErrorController{
 	
-	/*private static final String template = "Hello, %s";
-	private final AtomicLong counter = new AtomicLong();
-	
-	@GetMapping("/greeting")
-	RomanNumber greeting(@RequestParam String name) {
-		return new RomanNumber(counter.incrementAndGet(), String.format(template, name));
-	}*/
+	private final static String PATH = "/error";
 	
 	@RequestMapping("/romannumeral")
     public RomanNumber romanNumeral(@RequestParam(value="query", defaultValue="1") Integer query) {
-        if (query < 1 || query > 10000000) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Requested roman numeral is not between 1 and 10000000");
+        if (query < 1 || query > 4000) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Requested roman numeral is not between 1 and 4000");
         }
         return new RomanNumber(query);
     }
+
+	@Override
+	@RequestMapping(PATH)
+    @ResponseBody
+	public String getErrorPath() {
+		// TODO Auto-generated method stub
+		return "This App is built to convert intergers in range 1 to 4000";
+	}
 
 }

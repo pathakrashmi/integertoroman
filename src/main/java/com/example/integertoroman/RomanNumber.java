@@ -4,26 +4,10 @@ import java.util.*;
 
 public class RomanNumber {
 	
-	//private Long id;
-	//private String content;
-	
 	private final Integer numeral;
     private final String romanNumeral;
     
     private static NavigableMap<Integer, String> romanNumerals = new TreeMap<Integer, String>();
-	
-	/*public RomanNumber(Long id, String content) {
-		this.id = id;
-		this.content = content;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	
-	public String getContent() {
-		return content;
-	}*/
     
     static {
         romanNumerals.put(1, "I");
@@ -60,23 +44,21 @@ public class RomanNumber {
     }
 
     /**
-     * Given an input number returns the roman numeral conversion.
+     * This method converts integer number to roman numeral equivalent.
      *
-     * @param  number input to convert to roman numeral 
-     * @return        the roman numeral string representation of input 
+     * It takes integer as input and returns its roman equivalent
+     * 
+     * @param number integer number (range 1-4000)
+     * @return roman equivalent of number
      */
     private String convert(int number)
     {
         StringBuilder sb = new StringBuilder();
 
         while (number > 0) {
-            // floor the input number to the highest key that is < number
             int floored  = romanNumerals.floorKey(number);
             String numeral = romanNumerals.get(floored);
-
             sb.append(numeral);
-
-            // subtract the floored value and continue
             number -= floored;
         }
 
