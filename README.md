@@ -30,7 +30,7 @@ IntegertoromanApplicationTests: This class contains integration tests for this a
 
 Pom.xml: This xml file contains information of all the maven, spring configurations and dependencies. When the project is built, basically pom file get reads and all the dependent files (jars) are downloaded.
 
-Using Spring Boot Accurator for enabling devops capabilities for this project. 
+Using Spring Boot Accurator for enabling devops capabilities for this project. This utility allows one to monitor and manage web  applications. Application health monitoring, auditing, and metrics gathering can be done easily. The configuration file can be found at src/main/resources/application.properties where one can enable/disable various Accurator endpoints as per one's requirements.
 
 Following are some important accurator endpoints are available for this application among others.
 
