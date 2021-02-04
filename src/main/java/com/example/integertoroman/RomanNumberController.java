@@ -14,20 +14,26 @@ public class RomanNumberController implements ErrorController{
 	
 	private final static String PATH = "/error";
 	
+	/**
+     	* This method is responsible for converting integer numbers into its equivalent roman numeral
+     	*
+     	* @param  number integer number (range 1-3999)
+     	* @return roman equivalent of integer number 
+     	*/
 	@RequestMapping("/romannumeral")
-    public RomanNumber romanNumeral(@RequestParam(value="query", defaultValue="1") Integer query) {
-        if (query < 1 || query > 4000) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Requested roman numeral is not between 1 and 4000");
-        }
-        return new RomanNumber(query);
-    }
+    	public RomanNumber romanNumeral(@RequestParam(value="query") Integer query) {
+        	if (query <= 1 || query >= 3999) {
+            	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This utility supports integer-roman conversion only for the range 1-3999");
+        	}
+        	return new RomanNumber(query);
+    	}
 
 	@Override
 	@RequestMapping(PATH)
-    @ResponseBody
+    	@ResponseBody
 	public String getErrorPath() {
 		// TODO Auto-generated method stub
-		return "This App is built to convert intergers in range 1 to 4000";
+		return "This App is built to convert intergers in range 1 to 3999";
 	}
 
 }
