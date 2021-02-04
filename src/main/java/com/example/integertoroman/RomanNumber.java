@@ -30,14 +30,6 @@ public class RomanNumber {
         this.romanNumeral = convertIntegerToRoman(number);
     }
 
-    public String toString() {
-        return this.romanNumeral;
-    }
-
-    public int getNumeral() {
-        return this.numeral;
-    }
-
     public String getRomanNumeral() {
         return this.romanNumeral;
     }
@@ -60,7 +52,6 @@ public class RomanNumber {
             sb.append(numeral);
             number -= floored;
         }
-
         return sb.toString();
     }
 
