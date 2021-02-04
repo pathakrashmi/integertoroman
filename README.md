@@ -30,7 +30,7 @@ IntegertoromanApplicationTests: This class contains integration tests for this a
 
 Pom.xml: This xml file contains information of all the maven, spring configurations and dependencies. When the project is built, basically pom file get reads and all the dependent files (jars) are downloaded.
 
-Using Spring Boot Accurator for enabling devops capabilities for this project. This utility allows one to monitor and manage web  applications. Application health monitoring, auditing, and metrics gathering can be done easily. The configuration file can be found at src/main/resources/application.properties where one can enable/disable various Accurator endpoints as per one's requirements.
+Using Spring Boot Accurator for enabling devops capabilities for this project. This utility allows one to monitor and manage web applications. Application health monitoring, auditing, and metrics gathering can be done easily. The configuration file can be found at src/main/resources/application.properties where one can enable/disable various Accurator endpoints as per one's requirements.
 
 Following are some important accurator endpoints are available for this application among others.
 
@@ -40,3 +40,5 @@ Mapping (http://localhost:8080/actuator/mapping)
 Loggers (http://localhost:8080/actuator/loggers)
 Caches (http://localhost:8080/actuator/caches)
 Info (http://localhost:8080/actuator/info)
+
+One can also use Postman to monitor the API and its performance. Postman monitors can be used to schedule a collection which monitors the performance and responses of web APIs. The results of these scheduled searches can be used to send alerts or messages to the team. One major drawback of postman monitor is that it only allows to monitor 1000 APIs. But for this particular project (integertoroman) postman would be a decent fit.
