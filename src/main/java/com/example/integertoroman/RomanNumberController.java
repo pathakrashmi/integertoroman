@@ -22,7 +22,7 @@ public class RomanNumberController implements ErrorController{
      	*/
 	@RequestMapping("/romannumeral")
     	public RomanNumber romanNumeral(@RequestParam(value="query") Integer query) {
-        	if (query <= 1 || query >= 3999) {
+        	if (query < 0 || query > 4000) {
             	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This utility supports integer-roman conversion only for the range 1-3999");
         	}
         	return new RomanNumber(query);
