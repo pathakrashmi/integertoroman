@@ -5,20 +5,20 @@ This RESTful web service allows one to convert integer number to its equivalent 
 http://localhost:8080/romannumeral?query={integer}
 
 Roman Numeral Reference 
-•	https://www.rapidtables.com/convert/number/roman-numerals-converter.html
-•	http://www.novaroma.org/via_romana/numbers.html
-•	https://en.wikipedia.org/wiki/Roman_numerals
+	▪	https://www.rapidtables.com/convert/number/roman-numerals-converter.html
+	▪	http://www.novaroma.org/via_romana/numbers.html
+	▪	https://en.wikipedia.org/wiki/Roman_numerals
 
 Build and Run:
--	Clone this repo and open it in editor.
--	Clean and Build project (Mvn clean build)
--	Run IntegertoromanApplication.java as Java application
--	Open chrome browser and enter the following url: http://localhost:8080/romannumeral?query={integer} 
+	▪	Clone this repo and open it in editor.
+	▪	Clean and Build project (Mvn clean build)
+	▪	Run IntegertoromanApplication.java as Java application
+	▪	Open chrome browser and enter the following url: http://localhost:8080/romannumeral?query={integer}
 
 Dependencies
--	Maven: maven-4.0.0
--	JVM: 11.0.2 
--	Spring Framework: Spring boot actuator, Spring boot web, Spring boot test
+	▪	Maven: maven-4.0.0
+	▪	JVM: 11.0.2 
+	▪	Spring Framework: Spring boot actuator, Spring boot web, Spring boot test
 
 Packaging layout:
 This java service is serving a web site with Spring MVC. The java services are in src/main/java/. 
