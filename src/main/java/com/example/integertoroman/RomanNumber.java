@@ -27,7 +27,7 @@ public class RomanNumber {
     
     public RomanNumber(int number) {
         this.numeral = number;
-        this.romanNumeral = convert(number);
+        this.romanNumeral = convertIntegerToRoman(number);
     }
 
     public String toString() {
@@ -47,10 +47,10 @@ public class RomanNumber {
      *
      * It takes integer as input and returns its roman equivalent
      * 
-     * @param number integer number (range 1-4000)
+     * @param number integer number (range 1-3999)
      * @return roman equivalent of number
      */
-    private String convert(int number)
+    private String convertIntegerToRoman(int number)
     {
         StringBuilder sb = new StringBuilder();
 
