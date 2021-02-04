@@ -23,7 +23,6 @@ public class RomanNumber {
         romanNumerals.put(500, "D");
         romanNumerals.put(900, "CM");
         romanNumerals.put(1000, "M");
-        romanNumerals.put(4000, "I\u0305V\u0305");
     }
     
     public RomanNumber(int number) {
