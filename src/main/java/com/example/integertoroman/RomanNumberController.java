@@ -28,6 +28,11 @@ public class RomanNumberController implements ErrorController{
         	return new RomanNumber(query);
     	}
 
+	/**
+     	* This method is error handling method which is responsible for returning information to the user
+     	*
+     	* @return String
+     	*/
 	@Override
 	@RequestMapping(PATH)
     	@ResponseBody
