@@ -34,11 +34,11 @@ Using Spring Boot Accurator for enabling devops capabilities for this project. T
 
 Following are some important accurator endpoints are available for this application among others.
 
-Health (http://localhost:8080/actuator/health)
-Metrics (http://localhost:8080/actuator/metrics)
-Mapping (http://localhost:8080/actuator/mapping)
-Loggers (http://localhost:8080/actuator/loggers)
-Caches (http://localhost:8080/actuator/caches)
-Info (http://localhost:8080/actuator/info)
+	▪	Health (http://localhost:8080/actuator/health)
+	▪	Metrics (http://localhost:8080/actuator/metrics)
+	▪	Mapping (http://localhost:8080/actuator/mapping)
+	▪	Loggers (http://localhost:8080/actuator/loggers)
+	▪	Caches (http://localhost:8080/actuator/caches)
+	▪	Info (http://localhost:8080/actuator/info)
 
 One can also use Postman to monitor the API and its performance. Postman monitors can be used to schedule a collection which monitors the performance and responses of web APIs. The results of these scheduled searches can be used to send alerts or messages to the team. One major drawback of postman monitor is that it only allows to monitor 1000 APIs. But for this particular project (integertoroman) postman would be a decent fit.
