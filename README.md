@@ -10,7 +10,7 @@ Roman Numeral Reference
 	- https://en.wikipedia.org/wiki/Roman_numerals
 
 Build and Run:
-	- Clone this repo and open it in editor.
+	- Clone this repo and open it in editor
 	- Clean and Build project (Mvn clean build)
 	- Run IntegertoromanApplication.java as Java application
 	- Open chrome browser and enter the following url: http://localhost:8080/romannumeral?query={integer}
